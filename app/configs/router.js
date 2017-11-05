@@ -49,5 +49,12 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     }
   );
 
+  $stateProvider.state(
+    'thread.tree', {
+      url: '/tree',
+      templateUrl: 'controllers/thread/tree.html',
+      controller: 'ThreadTreeCtrl as vm'
+    }
+  );
   $urlRouterProvider.otherwise('/notFound');
 });
